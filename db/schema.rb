@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_205603) do
+ActiveRecord::Schema.define(version: 2020_05_05_195637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 2020_05_04_205603) do
     t.string "imageUrl"
     t.date "postedDate"
     t.boolean "isAdopted"
+    t.string "size"
+    t.boolean "spayed_neutered"
+    t.boolean "house_trained"
+    t.string "gender"
+    t.string "colors"
+    t.string "species"
   end
 
   create_table "users", force: :cascade do |t|
