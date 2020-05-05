@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
+gem 'rest-client'
 gem 'dotenv-rails', groups: [:development, :test]
 # use dotenv for hiding API key
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
