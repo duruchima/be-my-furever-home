@@ -21,13 +21,15 @@ animals_list = data["animals"]
 # pet5 = "#{animals_list[4]}"
 Pet.destroy_all
 i = 0
-while i < 15 do
+while i < 18 do
+    # imageVal = imageCheck(animals_list[i]['photos'][0]['full'])
+
     pet = Pet.create(name: animals_list[i]['name'], breed: animals_list[i]['breeds']['primary'], age: animals_list[i]['age'], description: animals_list[i]['description'],
     location: animals_list[i]['city'], postedDate: animals_list[i]['published_at'], 
     size: animals_list[i]['size'], spayed_neutered: animals_list[i]['attributes']['spayed_neutered'], house_trained: animals_list[i]['attributes']['house_trained'],
     gender: animals_list[i]['gender'], colors: animals_list[i]['colors']['primary'], species: animals_list[i]['species'], isAdopted: false)
     if animals_list[i]['photos'][0]
-        pet.imageUrl = animals_list[i]['photos'][0]['full']
+        pet.update(imageUrl: animals_list[i]['photos'][0]['full'])
     end
     i = i+1
 end
