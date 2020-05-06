@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "pets": [
     {
       "id": 1,
       "title": "json-server",
@@ -13,7 +13,7 @@
       "postId": 1
     }
   ],
-  "profile": {
+  "users": {
     "name": "typicode"
   }
 }
