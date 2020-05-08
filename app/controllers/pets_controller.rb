@@ -9,9 +9,15 @@ class PetsController < ApplicationController
         render json:@pet
     end
 
+    def update
+        @pet = Pet.find(params[:id])
+        @pet.update(pet_params)
+        render json:@pet
+    end
+
     private
 
-    def sub_category_params
-        params.require(:pet).permit(:pet_id)
+    def pet_params
+        params.require(:pet).permit(:pet_id, :isAdopted)
     end
 end
